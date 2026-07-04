@@ -1,0 +1,86 @@
+import { sidebar } from "vuepress-theme-hope";
+
+export const enSidebar = sidebar({
+  "/en/": [
+    "",
+    "important",
+    {
+      text: "Guide",
+      icon: "book",
+      prefix: "guide/",
+      collapsible: true,
+      children: [
+        "introduce",
+        "terminology",
+        "quick-start",
+        "params-confg",
+        "auto-track",
+      ],
+    },
+    {
+      text: "Sharding Table",
+      icon: "table",
+      prefix: "sharding-table/",
+      collapsible: true,
+      children: ["init", "query", "update", "delete"],
+    },
+    {
+      text: "Sharding DataSource",
+      icon: "database",
+      prefix: "sharding-data-source/",
+      collapsible: true,
+      children: ["init", "query", "update", "delete"],
+    },
+    {
+      text: "Sharding All",
+      icon: "server",
+      prefix: "sharding-all/",
+      collapsible: true,
+      children: ["init", "query", "update", "delete"],
+    },
+    {
+      text: "Read Write",
+      icon: "rotate",
+      prefix: "read-write/",
+      collapsible: true,
+      children: ["configure"],
+    },
+    {
+      text: "Route",
+      icon: "route",
+      prefix: "sharding-route/",
+      collapsible: true,
+      children: ["default-route", "customer-route", "manual-route"],
+    },
+    {
+      text: "Query",
+      icon: "magnifying-glass",
+      prefix: "query/",
+      collapsible: true,
+      children: [
+        "single-entity-query",
+        "multi-entity-query",
+        "group-by-query",
+        "query-in-transaction",
+      ],
+    },
+    {
+      text: "Advance",
+      icon: "layer-group",
+      prefix: "adv/",
+      collapsible: true,
+      children: [
+        "code-first",
+        "pagination",
+        "dynamic-table",
+        "batch-operate",
+        "transaction",
+        "route-parse-compile-cache",
+      ],
+    },
+    "question",
+    "abp",
+    "unit-test-coverage",
+    "benchmark",
+  ],
+});

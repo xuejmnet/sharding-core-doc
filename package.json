@@ -1,17 +1,31 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
-  "description": "docs",
+  "name": "sharding-core-doc2",
+  "description": "ShardingCore 官方文档（VuePress 2）",
+  "packageManager": "pnpm@10.0.0",
+  "version": "2.0.0",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "docs:build": "vuepress build docs",
-    "docs:clean-dev": "vuepress dev docs --no-cache",
-    "docs:dev": "vuepress dev docs --temp .temp",
-    "docs:eject-theme": "vuepress eject-hope docs",
-    "deploy": "yarn docs:build && bash deploy.sh"
+    "docs:build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "docs:dev": "vuepress-vite dev src",
+    "docs:update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "vuepress": "^1.8.2",
-    "vuepress-theme-hope": "^1.20.5"
+    "@vuepress/bundler-vite": "2.0.0-rc.21",
+    "@vuepress/helper": "2.0.0-rc.94",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.95",
+    "cross-env": "^7.0.3",
+    "markmap-lib": "^0.18.12",
+    "markmap-toolbar": "^0.18.12",
+    "markmap-view": "^0.18.12",
+    "mermaid": "^11.5.0",
+    "sass-embedded": "^1.83.0",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.21",
+    "vuepress-theme-hope": "2.0.0-rc.81"
+  },
+  "dependencies": {
+    "typed.js": "^2.1.0"
   }
 }
